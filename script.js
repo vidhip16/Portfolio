@@ -237,12 +237,12 @@ function createShootingStar() {
     tail.style.setProperty('--angle', `${angle}deg`);
     
     // Random size variation
-    const size = Math.random() * 0.3 + 0.85; // Between 85% and 115% of base size
+    const size = Math.random() * 0.3 + 0.85;
     star.style.transform = `scale(${size})`;
     tail.style.transform = `scale(${size})`;
     
     // Random speed variation
-    const duration = Math.random() * 1 + 2; // Between 2 and 3 seconds
+    const duration = Math.random() * 2 + 4; // Between 4 and 6 seconds
     star.style.animationDuration = `${duration}s`;
     tail.style.animationDuration = `${duration}s`;
     
@@ -273,13 +273,13 @@ function startShootingStars() {
     for (let i = 0; i < 3; i++) {
         setTimeout(() => {
             createShootingStar();
-        }, i * 500); // Stagger the initial stars more quickly
+        }, i * 1000); // Stagger the initial stars more slowly
     }
     
     // Continue creating stars at random intervals
     setInterval(() => {
         createShootingStar();
-    }, Math.random() * 2000 + 1000); // Random interval between 1-3 seconds
+    }, Math.random() * 3000 + 2000); // Random interval between 2-5 seconds
 }
 
 // Start the shooting stars when the page loads
