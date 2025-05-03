@@ -909,15 +909,15 @@ footer {
 /* Shooting Star Animation */
 .shooting-star {
     position: absolute;
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     background: linear-gradient(45deg, #fff, #ffd700, #ff69b4);
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     box-shadow: 0 0 0 4px rgba(255, 105, 180, 0.2),
                 0 0 0 8px rgba(255, 105, 180, 0.1),
                 0 0 20px rgba(255, 105, 180, 0.4),
                 0 0 30px rgba(255, 215, 0, 0.3);
-    animation: shooting 3s linear infinite;
+    animation: shooting 5s linear infinite;
     opacity: 0;
     z-index: 1;
     transform-origin: center;
