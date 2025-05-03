@@ -926,11 +926,11 @@ footer {
 .shooting-tail {
     position: absolute;
     width: 80px;
-    height: 2px;
+    height: 3px;
     background: linear-gradient(90deg, rgba(255, 105, 180, 0.8), rgba(255, 215, 0, 0.4), transparent);
     filter: blur(1px);
     transform-origin: left center;
-    animation: shooting-tail 3s linear infinite;
+    animation: shooting-tail 5s linear infinite;
     opacity: 0;
     z-index: 0;
     box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
