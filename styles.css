@@ -179,6 +179,10 @@ body {
     transition: width 0.3s ease;
 }
 
+.logo a:hover {
+    color: var(--primary-color);
+}
+
 .logo a:hover::after {
     width: 100%;
 }
@@ -681,22 +685,27 @@ footer {
 
 /* Responsive design */
 @media (max-width: 1024px) {
+    .about-section {
+        padding: 80px 0;
+    }
+
     .about-content {
         flex-direction: column;
-        gap: 40px;
+        gap: 30px;
     }
 
     .about-image {
         flex: 0 0 300px;
+        margin-top: 1rem;
     }
 
     .about-text-content {
         max-width: 100%;
     }
 
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+    .about-section h2.section-title {
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -717,7 +726,7 @@ footer {
     }
 
     .about-section {
-        padding: 80px 0;
+        padding: 60px 0;
     }
 
     .about-section .container {
@@ -726,10 +735,19 @@ footer {
 
     .about-image {
         flex: 0 0 250px;
+        margin-top: 0.5rem;
     }
 
     .about-text {
         font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+
+    .about-section h2.section-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        padding-bottom: 10px;
     }
 
     .contact-content {
@@ -744,9 +762,25 @@ footer {
     .project-image {
         height: 180px;
     }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        padding: 40px 0;
+    }
+
+    .about-image {
+        flex: 0 0 200px;
+    }
 
     .about-section h2.section-title {
-        font-size: 3rem;
+        font-size: 2rem;
+    }
+
+    .about-text {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 0.8rem;
     }
 }
 
@@ -961,5 +995,38 @@ footer {
     100% {
         transform: rotate(var(--angle)) translateX(-1000px);
         opacity: 0;
+    }
+}
+
+/* Media queries for shooting stars */
+@media (max-width: 768px) {
+    .shooting-star {
+        width: 15px;
+        height: 15px;
+        box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.2),
+                    0 0 0 6px rgba(255, 105, 180, 0.1),
+                    0 0 15px rgba(255, 105, 180, 0.4),
+                    0 0 20px rgba(255, 215, 0, 0.3);
+    }
+
+    .shooting-tail {
+        width: 60px;
+        height: 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .shooting-star {
+        width: 12px;
+        height: 12px;
+        box-shadow: 0 0 0 2px rgba(255, 105, 180, 0.2),
+                    0 0 0 4px rgba(255, 105, 180, 0.1),
+                    0 0 10px rgba(255, 105, 180, 0.4),
+                    0 0 15px rgba(255, 215, 0, 0.3);
+    }
+
+    .shooting-tail {
+        width: 40px;
+        height: 1.5px;
     }
 } 
