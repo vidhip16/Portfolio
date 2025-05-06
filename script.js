@@ -227,22 +227,31 @@ function createShootingStar() {
     star.className = 'shooting-star';
     tail.className = 'shooting-tail';
     
-    // Random position for the star
-    const startX = Math.random() * window.innerWidth;
-    const startY = Math.random() * (window.innerHeight / 2);
+    // Get viewport dimensions
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    
+    // Adjust start position based on screen size
+    const startX = Math.random() * viewportWidth;
+    const startY = Math.random() * (viewportHeight * 0.4); // Reduced height range for mobile
     
     // Random angle between 180 and 250 degrees
     const angle = Math.random() * 70 + 180;
     star.style.setProperty('--angle', `${angle}deg`);
     tail.style.setProperty('--angle', `${angle}deg`);
     
-    // Random size variation
-    const size = Math.random() * 0.3 + 0.85;
+    // Adjust size variation based on screen size
+    const isMobile = viewportWidth <= 768;
+    const size = isMobile ? 
+        (Math.random() * 0.2 + 0.8) : // Smaller size range for mobile
+        (Math.random() * 0.3 + 0.85); // Original size range for desktop
     star.style.transform = `scale(${size})`;
     tail.style.transform = `scale(${size})`;
     
-    // Random speed variation
-    const duration = Math.random() * 2 + 4; // Between 4 and 6 seconds
+    // Adjust speed based on screen size
+    const duration = isMobile ?
+        (Math.random() * 1.5 + 3) : // Faster for mobile
+        (Math.random() * 2 + 4); // Original speed for desktop
     star.style.animationDuration = `${duration}s`;
     tail.style.animationDuration = `${duration}s`;
     
@@ -264,25 +273,13 @@ function createShootingStar() {
     setTimeout(() => {
         star.remove();
         tail.remove();
+        // Create the next star after this one finishes
+        const nextStarDelay = isMobile ? 1500 : 2000; // Shorter delay for mobile
+        setTimeout(createShootingStar, nextStarDelay);
     }, duration * 1000);
-}
-
-// Create shooting stars at random intervals
-function startShootingStars() {
-    // Create initial batch of stars
-    for (let i = 0; i < 3; i++) {
-        setTimeout(() => {
-            createShootingStar();
-        }, i * 1000); // Stagger the initial stars more slowly
-    }
-    
-    // Continue creating stars at random intervals
-    setInterval(() => {
-        createShootingStar();
-    }, Math.random() * 3000 + 2000); // Random interval between 2-5 seconds
 }
 
 // Start the shooting stars when the page loads
 document.addEventListener('DOMContentLoaded', () => {
-    startShootingStars();
+    createShootingStar(); // Start with one star
 }); 
