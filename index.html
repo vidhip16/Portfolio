@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <div class="hexagon-grid"></div>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <a href="#home">Vidhi Patel</a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="theme-toggle-container">
+                    <button id="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="section">
+        <div class="container">
+            <h1>Welcome to My Portfolio</h1>
+            <p>I'm a passionate developer creating amazing digital experiences!</p>
+            <div class="social-links">
+                <a href="https://github.com/vidhip16" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/vidhi-patel-717256309" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="resume-container animate__animated animate__fadeInUp animate__delay-1s">
+                <a href="resume.pdf" class="resume-btn" target="_blank">
+                    <i class="fas fa-file-pdf"></i> Download My Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title animate__animated animate__fadeInUp">Hey, I'm Vidhi 🤗</h2>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="profile.JPG" alt="Vidhi Patel" class="profile-image">
+                </div>
+                
+                <div class="about-text-content">
+                    <p class="about-text animate__animated animate__fadeInUp animate__delay-1s">
+                        I'm a developer who transforms ideas into smooth, scalable, and engaging digital 
+                        experiences from front-end interactions to backend logic and deployment pipelines. 
+                        My work isn't just functional, it's thoughtful, performant, and built with users in 
+                        mind.
+                    </p>
+                    <p class="about-text animate__animated animate__fadeInUp animate__delay-2s">
+                        I specialize in crafting responsive user interfaces, architecting efficient APIs, 
+                        and building systems that scale gracefully. Whether it's designing dynamic 
+                        dashboards, debugging complex integrations, or optimizing database queries, I thrive 
+                        at every layer of the stack.
+                    </p>
+                    <p class="about-text animate__animated animate__fadeInUp animate__delay-3s">
+                        I've worked closely with designers, product teams, and backend engineers to ship 
+                        features users actually love, and I'm not afraid to dive deep, ask why, or rewrite 
+                        something until it's just right.
+                    </p> 
+                    <p class="about-text animate__animated animate__fadeInUp animate__delay-4s">
+                        My journey into full-stack development began with a passion for creating intuitive 
+                        products end-to-end. I write clean, maintainable code, whether it's styling a 
+                        pixel-perfect layout or structuring a backend service for long-term growth.
+                    </p>
+                    <p class="about-text animate__animated animate__fadeInUp animate__delay-5s">
+                        When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, 
+                        or sharing my knowledge through mentoring.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="handlescout.jpg" alt="HandleScout Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>HandleScout</h3>
+                        <p><strong>Tools:</strong> Python, REST APIs, HTML, CSS, JavaScript</p>
+                        <p>I developed a high-performance handle verification tool using Python and REST APIs to 
+                            check real-time username availability across Instagram, TikTok, X, and YouTube. The goal 
+                            was to reduce manual lookup time for users, especially creators and businesses. I designed a 
+                            clean, responsive front end using HTML, CSS, and JavaScript that featured smooth input validation 
+                            and real-time feedback. I also optimized multi-platform API calls to automate checks, helping 
+                            streamline branding workflows and save users hours of effort.</p>
+                        <a href="https://github.com/vidhip16/HandleScout" class="project-link" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="typeracer.jpg" alt="Type Racer Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Type Racer</h3>
+                        <p><strong>Tools:</strong> JavaScript, HTML, CSS</p>
+                        <p>I created a responsive browser-based typing game using vanilla JavaScript. 
+                            It featured real-time WPM (Words Per Minute) tracking, DOM manipulation for live 
+                            feedback, and custom logic to highlight correct and incorrect keystrokes. The UI included
+                            engaging CSS animations and selectable text lengths for users to test their typing speed.
+                            This project sharpened my skills in interactive front-end development and real-time user 
+                            feedback design.</p>
+                        <a href="https://github.com/vidhip16/Type-Racer" class="project-link" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="washroom.jpg" alt="Nearest Washroom Finder Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Nearest Washroom Finder</h3>
+                        <p><strong>Tools:</strong> React.js, JavaScript, OpenStreetMap API, Axios</p>
+                        <p>This location-based web app helps users find public washrooms within a 1.5 km radius. 
+                            Built with React.js and JavaScript, it integrates OpenStreetMap's Overpass API and uses
+                            the device's geolocation to display nearby options on an interactive map. I implemented 
+                            asynchronous data fetching with axios and focused on creating a mobile-friendly, 
+                            responsive UI for quick access in real-world situations.</p>
+                        <a href="https://github.com/vidhip16/Nearest-Washroom-Locater" class="project-link" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="portfolio.jpg" alt="Portfolio Website Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Image Generator</h3>
+                        <p><strong>Tools:</strong> HTML, CSS, JavaScript, Node.js, Express, OpenAI API</p>
+                        <p>I built a full-stack AI image generation web app that converts text prompts into visual artwork. 
+                            The frontend features a clean and responsive UI with live preview and download functionality. On the backend, a Node.js/Express 
+                            server securely handles OpenAI API requests and returns generated image URLs. The app includes dynamic image rendering, user-friendly input handling, 
+                            and scalable architecture with .env-based key management. This project strengthened my skills in API integration, server-client communication, and full-stack deployment readiness.</p>
+                        <a href="https://github.com/vidhip16/AI-Image-Generator" class="project-link" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="project5.jpg" alt="Project 5">
+                    </div>
+                    <div class="project-content">
+                        <h3>Vertical Video Extender</h3>
+                        <p><strong>Tools:</strong> React, Python, Flask, HTML, CSS, JavaScript, Bootstrap</p>
+                        <p>This AI-powered web app transforms horizontal videos into vertical format by generating 
+                            missing visual space above or below the original content. Users can upload a video, 
+                            choose extension settings, and preview the final result in a mobile mockup layout. 
+                            The backend uses Flask and OpenCV for video manipulation, with optional integration of 
+                            Hugging Face or Stability AI APIs for scene extension. I built a fully responsive UI 
+                            using Bootstrap and custom styling to enhance user experience and ease of use.</p>
+                        <a href="https://github.com/vidhip16/Video-Enhancer" class="project-link" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="picconvert.jpg" alt="Project 6">
+                    </div>
+                    <div class="project-content">
+                        <h3>Picture Converter</h3>
+                        <p><strong>Tools:</strong> Python</p>
+                        <p>This tool converts HEIC image files into JPG format. It's built using Python and the 
+                            Pillow library with HEIF support, it allows for efficient batch conversion of entire 
+                            folders. The tool is lightweight, easy to use, and ideal for preparing images for sharing, 
+                            editing, or web use. It helped sharpen my skills in file system automation, image handling,
+                            and command-line utility development.</p>
+                        <a href="https://github.com/vidhip16/Picture-Converter" class="project-link" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <div class="contact-content">
+                <form action="https://formspree.io/f/xrbqeajd" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required />
+                    <input type="email" name="email" placeholder="Your Email" required />
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024-2025 Vidhi Patel. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 
